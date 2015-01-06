@@ -18,13 +18,6 @@
 static void printUsage();
 static void die(char *msg);
 
-char *getPath(char *dirName, char *fileType);
-void writeRdMe(FILE *rdMe, char *dirName);
-void mkLangDirs(int argc, char **argv, char *dirName);
-FILE *mkFile(char *path);
-void writeMakefile(FILE *makefile, char *dirName);
-void createDir(char *dirName);
-
 int main(int argc, char **argv) {
     if (argc < 2) {
         printUsage();
@@ -94,6 +87,7 @@ void mkLangDirs(int argc, char **argv, char *dirName) {
         strcat(path, "/");
         strcat(path, argv[i]);
         createDir(path);
+        free(path);
     }
 }
 
