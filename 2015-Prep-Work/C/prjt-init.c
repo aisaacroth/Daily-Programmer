@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/stat.h>
 #include "prjt-init.h"
 
@@ -24,7 +25,11 @@ int main(int argc, char **argv) {
 
     int i;
     for (i = 2; i < argc; i++) {
-        printf("%s\n", argv[i]);
+        char *path = malloc(strlen(dirName) + 1 + strlen(argv[i]) + 1);
+        strcpy(path, dirName);
+        strcat(path, "/");
+        strcat(path, argv[i]);
+        mkdir(path, 0755);
     }
 
     return 0;
