@@ -108,7 +108,7 @@ void writeMakefile(FILE *makefile, char *dirName) {
     fprintf(makefile, "\n");
     fprintf(makefile, ".PHONY: clean\n");
     fprintf(makefile, "clean:\n");
-    fprintf(makefile, "\trm -r *~\n");
+    fprintf(makefile, "\trm -f *~\n");
     fprintf(makefile, "\n");
     fprintf(makefile, ".PHONY: all\n");
     fprintf(makefile, "all: clean\n");
