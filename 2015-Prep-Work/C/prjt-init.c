@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/stat.h>
 #include "prjt-init.h"
 
 /*
@@ -15,6 +16,15 @@ static void printUsage();
 int main(int argc, char **argv) {
     if (argc < 2) {
         printUsage();
+    }
+
+    char *dirName = argv[1];
+    int status;
+    status = mkdir(dirName, 0755);
+
+    int i;
+    for (i = 2; i < argc; i++) {
+        printf("%s\n", argv[i]);
     }
 
     return 0;
