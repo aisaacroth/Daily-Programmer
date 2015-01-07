@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 /**
@@ -23,11 +24,17 @@ public class ProjectInitializer {
 
         DirectoryCreator directoryCreator = new DirectoryCreator(projectName, 
                 subDirectories);
+        ReadMeGenerator readMeGenerator = new ReadMeGenerator(projectName);
+        MakefileGenerator makefileGenerator = new MakefileGenerator(projectName);
 
         try {
             directoryCreator.createProjectDirectory();
             directoryCreator.createLanguageDirectories();
+            readMeGenerator.generateReadMe();
+            makefileGenerator.generateMakefile();
         } catch (SecurityException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
@@ -58,5 +65,9 @@ public class ProjectInitializer {
         for (String sub : directoryCreator.getLanguageDirectories()) {
             System.out.println(sub);
         }
+
+        System.out.println();
+        System.out.println("Created README.md");
+        System.out.println("Created Makefile");
     }
 }

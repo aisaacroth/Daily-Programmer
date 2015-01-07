@@ -1,3 +1,4 @@
+import java.io.*;
 
 /**
  * ReadMeGenerator.java -
@@ -7,6 +8,7 @@
  **/
 public class ReadMeGenerator {
     private String projectName;
+    private final String README = "README.md";
 
     public ReadMeGenerator() {
         this.projectName = null;
@@ -14,6 +16,25 @@ public class ReadMeGenerator {
 
     public ReadMeGenerator(String projectName) {
         this.projectName = projectName;
+    }
+
+    public void generateReadMe() throws FileNotFoundException {
+        File readMe = createReadMe();
+        writeReadMe(readMe);
+    }
+
+    private File createReadMe() {
+        String projectPath = this.getProjectName() + "/" + README;
+        File readMe = new File(projectPath);
+        return readMe;
+    }
+
+    private void writeReadMe(File readMe) throws FileNotFoundException {
+        PrintWriter readMeWriter = new PrintWriter(readMe);
+        readMeWriter.write(this.getProjectName() + "\n");
+        readMeWriter.write("======\n");
+        readMeWriter.flush();
+        readMeWriter.close();
     }
 
     public String getProjectName() {
