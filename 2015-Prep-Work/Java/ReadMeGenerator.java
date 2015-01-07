@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * ReadMeGenerator.java -
+ * ReadMeGenerator.java - Generates ReadMe file with project name.
  *
  * @author Alexander Roth
  * @date   2015-01-06

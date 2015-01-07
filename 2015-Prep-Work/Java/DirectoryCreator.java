@@ -1,7 +1,8 @@
 import java.io.File;
 
 /**
- * DirectoryCreator.java -
+ * DirectoryCreator.java - Creates specific project directory and langauge
+ * subdirectories.
  *
  * @author Alexander Roth
  * @date   2015-01-06

@@ -2,7 +2,8 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 /**
- * ProjectInitializer.java - 
+ * ProjectInitializer.java - Creates a new project directory and language 
+ * specific subdirectories.
  *
  * @author Alexander Roth
  * @date   2015-01-06

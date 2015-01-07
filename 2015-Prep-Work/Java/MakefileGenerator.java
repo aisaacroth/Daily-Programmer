@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * MakefileGenerator.java -
+ * MakefileGenerator.java - Generates generic makefile.
  *
  * @author Alexander Roth
  * @date   2015-01-06
