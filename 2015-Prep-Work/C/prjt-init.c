@@ -44,6 +44,7 @@ int main(int argc, char **argv) {
 
     fclose(makefile);
 
+    printStats(dirName, argc, argv);
     return 0;
 }
 
@@ -113,4 +114,21 @@ void writeMakefile(FILE *makefile, char *dirName) {
     fprintf(makefile, ".PHONY: all\n");
     fprintf(makefile, "all: clean\n");
 }
+
+void printStats(char *dirName, int argc, char **argv) {
+    printf("Created project directory: %s\n", dirName);
+    printf("\n");
+    printf("Create language directories\n");
+    printf("---------------------------\n");
+
+    int i;
+    for (i = 2; i < argc; i++) {
+        printf("%s\n", argv[i]);
+    }
+
+    printf("\n");
+    printf("Created README.md\n");
+    printf("Created Makefile\n");
+}
+    
 

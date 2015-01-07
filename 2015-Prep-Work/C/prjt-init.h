@@ -14,6 +14,6 @@ void mkLangDirs(int argc, char **argv, char *dirName);
 FILE *mkFile(char *path);
 void writeMakefile(FILE *makefile, char *dirName);
 void createDir(char *dirName);
-
+void printStats(char *dirName, int argc, char **argv);
 
 #endif
