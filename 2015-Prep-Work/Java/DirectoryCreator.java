@@ -1,3 +1,5 @@
+import java.io.File;
+
 /**
  * DirectoryCreator.java -
  *
@@ -19,6 +21,25 @@ public class DirectoryCreator {
         this.languageDirectories = languageDirectories;
     }
 
+    public void createProjectDirectory() throws SecurityException {
+        File projectDirectory = new File(this.getProjectDirectory() + "/");
+        projectDirectory.mkdir();
+    }
+
+    public void createLanguageDirectories() throws SecurityException {
+        String projectPath = this.getProjectDirectory() + "/";
+
+        if (this.getLanguageDirectories() == null) {
+            return;
+        }
+
+        for (String subPath : this.getLanguageDirectories()) {
+            String completePath = projectPath + subPath + "/";
+            File subDirectory = new File(completePath);
+            subDirectory.mkdir();
+        }
+    }
+    
     public String getProjectDirectory() {
         return this.projectDirectory;
     }
