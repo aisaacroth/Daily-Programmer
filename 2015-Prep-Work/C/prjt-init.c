@@ -8,9 +8,9 @@
 #define README "README.md"
 
 /*
- * prjt-init.c - Creates a new directory based on project name, writes a Makefile,
- * creates a README.md, git inits the director, and creates language-specific 
- * sub-directories.
+ * prjt-init.c - Creates a new directory based on project name, writes a 
+ * Makefile, creates a README.md, git inits the director, and creates 
+ * language-specific sub-directories.
  *
  * Author: Alexander Roth
  * Date:   2015-01-06
