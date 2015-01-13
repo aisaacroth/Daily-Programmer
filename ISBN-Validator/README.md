@@ -26,7 +26,7 @@ For example:
 `(10 * 0) + (9 * 7) + (8 * 4) + (7 * 7) + (6 * 5) + (5 * 3) + (4 * 2) + (3 * 6)
 + (2 * 9) + (1 * 9) = 242` which can be dived by 11 and have no remaineder.
 
-For the cases where the last digit has to eqaul to ten, the last digit is
+For the cases where the last digit has to equal to ten, the last digit is
 written as X. For example `156881111X`.
 
 ##Bonus##
