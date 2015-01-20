@@ -23,7 +23,7 @@ def check_unique_str(origin_string):
 
 
 def print_arguments(args):
-    print('python3 {0} <word>'.format(args[0]))
+    print('Usage: python3 {0} <word>'.format(args[0]))
     sys.exit()
 
 
