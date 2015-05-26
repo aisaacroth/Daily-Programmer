@@ -9,7 +9,7 @@ others thanks to this ISBN. But when is an ISBN not just a random slurry of
 digits? That's for you to find out
 
 ##Rules##
-GIven the following constraints of the ISBN number, you sould write a function
+Given the following constraints of the ISBN number, you sould write a function
 that can return `True` if a number is a valid ISBN and `False` otherwise.
 
 An ISBN is a ten digit code which identifies a book. The first nine digist
