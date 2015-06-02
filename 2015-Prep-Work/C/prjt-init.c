@@ -118,7 +118,7 @@ void writeMakefile(FILE *makefile, char *dirName) {
 void printStats(char *dirName, int argc, char **argv) {
     printf("Created project directory: %s\n", dirName);
     printf("\n");
-    printf("Create language directories\n");
+    printf("Created language directories\n");
     printf("---------------------------\n");
 
     int i;
